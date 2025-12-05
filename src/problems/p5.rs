@@ -1,6 +1,7 @@
 // Write a function `reverse<T>(list: Vec<T>) -> Vec<T>' that returns the of elements of a list
 // reversed
 use super::Solution;
+use crate::util::prepend_item::Prepend;
 
 pub struct P5;
 
@@ -18,11 +19,7 @@ impl P5 {
     {
         match curr.as_slice() {
             [] => next.clone(),
-            [x, rest @ ..] => {
-                let rev = vec![vec![x.clone()], next.clone()].concat();
-
-                Self::reverse_rec(&rest.to_vec(), &rev)
-            }
+            [x, rest @ ..] => Self::reverse_rec(&rest.to_vec(), &next.prepend_item(x.clone())),
         }
     }
 }

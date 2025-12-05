@@ -1,3 +1,5 @@
+use crate::util::append_item::Append;
+
 // Pack consecutive duplicates
 use super::Solution;
 
@@ -22,8 +24,7 @@ impl P9 {
                 Self::pack_rec(&curr[1..].to_vec(), next)
             }
             (Some(x), _) => {
-                next.push(vec![x.clone()]);
-                Self::pack_rec(&curr[1..].to_vec(), next)
+                Self::pack_rec(&curr[1..].to_vec(), &mut next.append_item(vec![x.clone()]))
             }
         }
     }

@@ -10,8 +10,7 @@ impl P2 {
 
     fn last_two_rec<T>(list: &[T]) -> Option<(&T, &T)> {
         match list {
-            [] => None,
-            [_] => None,
+            [] | [_] => None,
             [x, y] => Some((x, y)),
             [_, rest @ ..] => Self::last_two_rec(rest),
         }

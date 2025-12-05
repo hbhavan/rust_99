@@ -10,6 +10,7 @@ use crate::problems::p9::P9;
 use crate::problems::test;
 
 mod problems;
+mod util;
 
 fn main() {
     let mut results = Vec::new();
