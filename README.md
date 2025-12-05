@@ -1,1 +1,1 @@
-Based on these [https://ocaml.org/exercises](exercises)
+Based on these [exercises](https://ocaml.org/exercises)
