@@ -1,11 +1,11 @@
 use crate::util::append_item::Append;
 
-// Pack consecutive duplicates
+// P0ack consecutive duplicates
 use super::Solution;
 
-pub struct P9;
+pub struct P09;
 
-impl P9 {
+impl P09 {
     fn pack<T>(list: &Vec<T>) -> Vec<Vec<T>>
     where
         T: Clone + PartialEq,
@@ -37,12 +37,12 @@ impl P9 {
     }
 }
 
-impl Solution for P9 {
+impl Solution for P09 {
     type Input = Vec<char>;
     type Output = Vec<Vec<char>>;
 
     fn test_name() -> String {
-        String::from("Pack List")
+        String::from("P0ack List")
     }
 
     fn get_inputs() -> [Self::Input; 3] {
@@ -75,6 +75,6 @@ impl Solution for P9 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P9::pack(input)
+        P09::pack(input)
     }
 }

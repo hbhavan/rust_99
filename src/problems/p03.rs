@@ -2,9 +2,9 @@
 
 use super::Solution;
 
-pub struct P3;
+pub struct P03;
 
-impl P3 {
+impl P03 {
     pub fn nth<T>(n: usize, list: &[T]) -> Option<&T> {
         Self::nth_rec(n, list)
     }
@@ -18,7 +18,7 @@ impl P3 {
     }
 }
 
-impl Solution for P3 {
+impl Solution for P03 {
     type Input = (usize, Vec<char>);
     type Output = Option<char>;
 
@@ -43,6 +43,6 @@ impl Solution for P3 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P3::nth(input.0, &input.1).map(|c| *c)
+        P03::nth(input.0, &input.1).map(|c| *c)
     }
 }

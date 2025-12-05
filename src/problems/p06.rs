@@ -1,9 +1,9 @@
 // Find out whether a list is a palindrome
 use super::Solution;
 
-pub struct P6;
+pub struct P06;
 
-impl P6 {
+impl P06 {
     fn palindrome<T>(list: &[T]) -> bool
     where
         T: PartialEq,
@@ -24,12 +24,12 @@ impl P6 {
     }
 }
 
-impl Solution for P6 {
+impl Solution for P06 {
     type Input = Vec<char>;
     type Output = bool;
 
     fn test_name() -> String {
-        String::from("Palindrome")
+        String::from("P0alindrome")
     }
 
     fn get_inputs() -> [Self::Input; 3] {
@@ -45,6 +45,6 @@ impl Solution for P6 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P6::palindrome(input)
+        P06::palindrome(input)
     }
 }

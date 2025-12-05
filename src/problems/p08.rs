@@ -3,9 +3,9 @@ use crate::util::append_item::Append;
 // Eliminate consecutive duplicates (compress) of list elements
 use super::Solution;
 
-pub struct P8;
+pub struct P08;
 
-impl P8 {
+impl P08 {
     fn compress<T>(list: &Vec<T>) -> Vec<T>
     where
         T: Clone + PartialEq,
@@ -30,7 +30,7 @@ impl P8 {
     }
 }
 
-impl Solution for P8 {
+impl Solution for P08 {
     type Input = Vec<char>;
     type Output = Vec<char>;
 
@@ -61,6 +61,6 @@ impl Solution for P8 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P8::compress(input)
+        P08::compress(input)
     }
 }

@@ -1,12 +1,12 @@
-use crate::problems::p1::P1;
-use crate::problems::p2::P2;
-use crate::problems::p3::P3;
-use crate::problems::p4::P4;
-use crate::problems::p5::P5;
-use crate::problems::p6::P6;
-use crate::problems::p7::P7;
-use crate::problems::p8::P8;
-use crate::problems::p9::P9;
+use crate::problems::p01::P01;
+use crate::problems::p02::P02;
+use crate::problems::p03::P03;
+use crate::problems::p04::P04;
+use crate::problems::p05::P05;
+use crate::problems::p06::P06;
+use crate::problems::p07::P07;
+use crate::problems::p08::P08;
+use crate::problems::p09::P09;
 use crate::problems::test;
 
 mod problems;
@@ -15,15 +15,15 @@ mod util;
 fn main() {
     let mut results = Vec::new();
 
-    results.extend(test::<P1>());
-    results.extend(test::<P2>());
-    results.extend(test::<P3>());
-    results.extend(test::<P4>());
-    results.extend(test::<P5>());
-    results.extend(test::<P6>());
-    results.extend(test::<P7>());
-    results.extend(test::<P8>());
-    results.extend(test::<P9>());
+    results.extend(test::<P01>());
+    results.extend(test::<P02>());
+    results.extend(test::<P03>());
+    results.extend(test::<P04>());
+    results.extend(test::<P05>());
+    results.extend(test::<P06>());
+    results.extend(test::<P07>());
+    results.extend(test::<P08>());
+    results.extend(test::<P09>());
 
     for result in results {
         println!("{}", result)

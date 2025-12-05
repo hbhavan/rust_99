@@ -1,9 +1,9 @@
 // Write a function `last_two<T>(list: &[T]) -> Option<(&T, &T)>' that returns the last two elements of a list
 use super::Solution;
 
-pub struct P2;
+pub struct P02;
 
-impl P2 {
+impl P02 {
     pub fn last_two<T>(list: &[T]) -> Option<(&T, &T)> {
         Self::last_two_rec(list)
     }
@@ -17,7 +17,7 @@ impl P2 {
     }
 }
 
-impl Solution for P2 {
+impl Solution for P02 {
     type Input = Vec<char>;
     type Output = Option<(char, char)>;
 
@@ -38,6 +38,6 @@ impl Solution for P2 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P2::last_two(&input).map(|(c1, c2)| (*c1, *c2))
+        P02::last_two(&input).map(|(c1, c2)| (*c1, *c2))
     }
 }

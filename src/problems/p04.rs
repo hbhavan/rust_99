@@ -1,9 +1,9 @@
 // Write a function `length()' that returns the number of elements of a list
 use super::Solution;
 
-pub struct P4;
+pub struct P04;
 
-impl P4 {
+impl P04 {
     pub fn length<T>(list: &[T]) -> usize {
         Self::length_rec(0, list)
     }
@@ -16,7 +16,7 @@ impl P4 {
     }
 }
 
-impl Solution for P4 {
+impl Solution for P04 {
     type Input = Vec<char>;
     type Output = usize;
 
@@ -37,6 +37,6 @@ impl Solution for P4 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P4::length(input)
+        P04::length(input)
     }
 }

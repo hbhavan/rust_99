@@ -1,14 +1,14 @@
 // Flatten a nested list
 use super::Solution;
 
-pub struct P7;
+pub struct P07;
 
 pub enum Node<T> {
     One(T),
     Many(Vec<Node<T>>),
 }
 
-impl P7 {
+impl P07 {
     fn flatten<T>(list: &Vec<Node<T>>) -> Vec<T>
     where
         T: Clone,
@@ -29,7 +29,7 @@ impl P7 {
     }
 }
 
-impl Solution for P7 {
+impl Solution for P07 {
     type Input = Vec<Node<char>>;
     type Output = Vec<char>;
 
@@ -58,6 +58,6 @@ impl Solution for P7 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P7::flatten(input)
+        P07::flatten(input)
     }
 }

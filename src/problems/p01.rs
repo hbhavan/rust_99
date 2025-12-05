@@ -2,9 +2,9 @@
 
 use super::Solution;
 
-pub struct P1;
+pub struct P01;
 
-impl P1 {
+impl P01 {
     pub fn last<T>(list: &[T]) -> Option<&T> {
         Self::last_rec(list)
     }
@@ -18,7 +18,7 @@ impl P1 {
     }
 }
 
-impl Solution for P1 {
+impl Solution for P01 {
     type Input = Vec<char>;
     type Output = Option<char>;
 
@@ -39,6 +39,6 @@ impl Solution for P1 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P1::last(input).map(|c| *c)
+        P01::last(input).map(|c| *c)
     }
 }

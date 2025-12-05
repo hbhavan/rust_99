@@ -3,9 +3,9 @@
 use super::Solution;
 use crate::util::prepend_item::Prepend;
 
-pub struct P5;
+pub struct P05;
 
-impl P5 {
+impl P05 {
     fn reverse<T>(list: &Vec<T>) -> Vec<T>
     where
         T: Clone,
@@ -24,7 +24,7 @@ impl P5 {
     }
 }
 
-impl Solution for P5 {
+impl Solution for P05 {
     type Input = Vec<char>;
     type Output = Vec<char>;
 
@@ -45,6 +45,6 @@ impl Solution for P5 {
     }
 
     fn execute(input: &Self::Input) -> Self::Output {
-        P5::reverse(&input)
+        P05::reverse(&input)
     }
 }
