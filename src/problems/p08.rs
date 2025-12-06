@@ -1,4 +1,4 @@
-use crate::util::append_item::Append;
+use crate::util::{append_item::Append, rest::Rest};
 
 // Eliminate consecutive duplicates (compress) of list elements
 use super::Solution;
@@ -20,12 +20,10 @@ impl P08 {
         match (curr.first(), next.last()) {
             (None, _) => next.clone(),
             (Some(x), Some(y)) if x != y => {
-                Self::compress_rec(&curr[1..].to_vec(), &next.append_item(x.clone()))
+                Self::compress_rec(&curr.rest(), &next.append_item(x.clone()))
             }
-            (Some(x), None) => {
-                Self::compress_rec(&curr[1..].to_vec(), &next.append_item(x.clone()))
-            }
-            (_, _) => Self::compress_rec(&curr[1..].to_vec(), next),
+            (Some(x), None) => Self::compress_rec(&curr.rest(), &next.append_item(x.clone())),
+            (_, _) => Self::compress_rec(&curr.rest(), next),
         }
     }
 }

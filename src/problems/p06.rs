@@ -29,7 +29,7 @@ impl Solution for P06 {
     type Output = bool;
 
     fn test_name() -> String {
-        String::from("P0alindrome")
+        String::from("Palindrome")
     }
 
     fn get_inputs() -> [Self::Input; 3] {

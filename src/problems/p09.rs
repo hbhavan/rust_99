@@ -1,7 +1,6 @@
-use crate::util::append_item::Append;
-
-// P0ack consecutive duplicates
+// Pack consecutive duplicates
 use super::Solution;
+use crate::util::{append_item::Append, rest::Rest};
 
 pub struct P09;
 
@@ -21,11 +20,9 @@ impl P09 {
             (None, _) => next.clone(),
             (Some(x), Some(y)) if x == y => {
                 Self::append_to_end(next, x.clone());
-                Self::pack_rec(&curr[1..].to_vec(), next)
+                Self::pack_rec(&curr.rest(), next)
             }
-            (Some(x), _) => {
-                Self::pack_rec(&curr[1..].to_vec(), &mut next.append_item(vec![x.clone()]))
-            }
+            (Some(x), _) => Self::pack_rec(&curr.rest(), &mut next.append_item(vec![x.clone()])),
         }
     }
 
@@ -42,7 +39,7 @@ impl Solution for P09 {
     type Output = Vec<Vec<char>>;
 
     fn test_name() -> String {
-        String::from("P0ack List")
+        String::from("Pack List")
     }
 
     fn get_inputs() -> [Self::Input; 3] {

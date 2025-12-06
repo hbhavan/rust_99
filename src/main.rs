@@ -7,6 +7,9 @@ use crate::problems::p06::P06;
 use crate::problems::p07::P07;
 use crate::problems::p08::P08;
 use crate::problems::p09::P09;
+use crate::problems::p10::P10;
+use crate::problems::p11::P11;
+use crate::problems::p12::P12;
 use crate::problems::test;
 
 mod problems;
@@ -24,6 +27,9 @@ fn main() {
     results.extend(test::<P07>());
     results.extend(test::<P08>());
     results.extend(test::<P09>());
+    results.extend(test::<P10>());
+    results.extend(test::<P11>());
+    results.extend(test::<P12>());
 
     for result in results {
         println!("{}", result)
